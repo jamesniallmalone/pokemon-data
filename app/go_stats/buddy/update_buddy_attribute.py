@@ -58,12 +58,12 @@ failure_count = 0
 
 for pokemon in tqdm(
     pokemon_to_update,
-    desc="Updating Released Pokémon"
+    desc="Updating Buddy Pokémon"
 ):
 
     alias = pokemon["alias"]
     pokemon_id = pokemon["id"]
-    release_date = pokemon["goReleasedDate"]
+    buddy_date = pokemon["buddyCompleteDate"]
 
     while True:
 
@@ -77,13 +77,13 @@ for pokemon in tqdm(
 
                 UpdateExpression="""
                     SET
-                        goReleased = :released,
-                        goReleasedDate = :releaseDate
+                        goBuddy = :released,
+                        buddyCompleteDate = :buddyCompleteDate
                 """,
 
                 ExpressionAttributeValues={
-                    ":released": True,
-                    ":releaseDate": release_date
+                    ":goBuddy": True,
+                    ":buddyCompleteDate": buddy_date
                 }
             )
 
