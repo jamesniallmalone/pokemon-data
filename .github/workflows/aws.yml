@@ -32,7 +32,7 @@ on:
 
 env:
   AWS_REGION: eu-north-1                   # set this to your preferred AWS region, e.g. us-west-1
-  ECR_REPOSITORY: pokemon-data           # set this to your Amazon ECR repository name
+  ECR_REPOSITORY: jamesniallmalone/pokemon-data           # set this to your Amazon ECR repository name
   ECS_SERVICE: python-app-task-definition-service-pimrdzwr                 # set this to your Amazon ECS service name
   ECS_CLUSTER: heavenly-bird-mv9bvi                 # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: python-app-task-definition # set this to the path to your Amazon ECS task definition
