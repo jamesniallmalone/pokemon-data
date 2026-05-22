@@ -1,4 +1,4 @@
-# Pokemon API
+# Pokemon API.
 
 FastAPI + DynamoDB CRUD API for Pokemon metadata.
 
